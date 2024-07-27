@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { Layout } from "@/components/Layout/Layout";
+import { Sidebar } from "./components/Layout/Sidebar";
+
+interface Admin {
+  id:number,
+  name: string,
+  surname: string,
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const [admins, setAdmins] = React.useState<Admin[]>([])
+  // React.useEffect(() =>{
+  //   const fetchData = async () => {
+  //     const response = await fetch("http://localhost:8080/api/admins");
+  //     const data = await response.json();
+  //     setAdmins(data);
+  //   };
+  //   fetchData();
+  // },[])
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+       <Layout/>
+       {/* <Sidebar className="p-5 shadow-lg" /> */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
