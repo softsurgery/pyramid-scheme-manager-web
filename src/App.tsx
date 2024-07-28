@@ -1,28 +1,23 @@
-import React from "react";
 import { Layout } from "@/components/Layout/Layout";
-import { Sidebar } from "./components/Layout/Sidebar";
-
-interface Admin {
-  id:number,
-  name: string,
-  surname: string,
-}
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
-  // const [admins, setAdmins] = React.useState<Admin[]>([])
-  // React.useEffect(() =>{
-  //   const fetchData = async () => {
-  //     const response = await fetch("http://localhost:8080/api/admins");
-  //     const data = await response.json();
-  //     setAdmins(data);
-  //   };
-  //   fetchData();
-  // },[])
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "/", element: <h1>Home</h1> },
+        { path: "about", element: <h1>About</h1> },
+        { path: "contact", element: <h1>Contact</h1> },
+        { path: "*", element: <h1>Not Found</h1> },
+      ],
+    },
+  ]);
   return (
     <>
       <div>
-       <Layout/>
-       {/* <Sidebar className="p-5 shadow-lg" /> */}
+        <RouterProvider router={router} />
       </div>
     </>
   );
