@@ -1,6 +1,6 @@
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Button } from "../ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "../../ui/sheet";
+import { Button } from "../../ui/button";
 import { PanelLeft, Search } from "lucide-react";
 import {
   Breadcrumb,
@@ -9,8 +9,8 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "../ui/breadcrumb";
-import { Input } from "../ui/input";
+} from "../../ui/breadcrumb";
+import { Input } from "../../ui/input";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -18,7 +18,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
+} from "../../ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { ResponsiveSidebar } from "./ResponsiveSidebar";
 import { MenuItem } from "./StaticMenu";

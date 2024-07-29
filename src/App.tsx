@@ -1,5 +1,6 @@
-import { Layout } from "@/components/Layout/Layout";
+import { Layout } from "@/components/Layout/Admin/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Flow from "./components/Graph/Graph";
 
 function App() {
   const router = createBrowserRouter([
@@ -7,7 +8,7 @@ function App() {
       path: "/",
       element: <Layout />,
       children: [
-        { path: "/", element: <h1>Home</h1> },
+        { path: "/visualizer", element: <Flow /> },
         { path: "about", element: <h1>About</h1> },
         { path: "contact", element: <h1>Contact</h1> },
         { path: "*", element: <h1>Not Found</h1> },
